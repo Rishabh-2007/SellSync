@@ -42,15 +42,6 @@ app.add_middleware(
 
 app.include_router(api_router)
 
-@app.get("/")
-def root():
-    return {
-        "app": "SellSync",
-        "tagline": "One dashboard. Every sales channel. Less manual work.",
-        "status": "online",
-        "docs_url": "/docs",
-        "api_prefix": "/api"
-    }
 
 # Serve the compiled React app from the same service in production.
 # API routes above take precedence; all other paths fall back to the SPA.
